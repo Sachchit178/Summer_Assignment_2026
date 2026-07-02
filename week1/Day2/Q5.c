@@ -1,16 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    int n, sum = 0;
+    int num, digit, sum = 0;
 
     printf("Enter a number: ");
-    scanf("%d", &n);
+    scanf("%d", &num);
 
-    for(int i = 1; i <= n; i++) {
-        sum += i;
+    while (num != 0) {
+        digit = num % 10;
+        sum = sum + digit;
+        num = num / 10;
     }
 
-    printf("Sum of first %d natural numbers = %d\n", n, sum);
+    printf("Sum of digits = %d\n", sum);
 
     return 0;
 }
